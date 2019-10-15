@@ -275,6 +275,16 @@ NSString *const SoundDidFinishPlayingNotification = @"SoundDidFinishPlayingNotif
   }
 }
 
+-(void)resume
+{
+    [_sound pause];
+}
+
+-(void)pause
+{
+    [_sound play];
+}
+
 - (void)stop
 {
   if (self.playing)
@@ -489,6 +499,16 @@ NSString *const SoundDidFinishPlayingNotification = @"SoundDidFinishPlayingNotif
     [_currentMusic stop];
   }
   self.currentMusic = nil;
+}
+
+- (void) pauseMusic
+{
+    [_currentMusic pause];
+}
+
+- (void) resumeMusic
+{
+    [_currentMusic resume];
 }
 
 - (void)stopMusic
