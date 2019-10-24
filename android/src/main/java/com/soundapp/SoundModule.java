@@ -51,7 +51,7 @@ public class SoundModule extends ReactContextBaseJavaModule {
     public void resumeSound() {
         try {
             if(mediaPlayer != null) {
-                mediaPlayer.resume();
+                mediaPlayer.start();
             }
         } catch (Exception e) {
             e.printStackTrace();
